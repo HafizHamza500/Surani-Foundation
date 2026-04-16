@@ -36,6 +36,37 @@ body {
     --border-color: #e0e0e0;
 }
 
+::selection {
+	background: var(--primary-color);
+	color: var(--white);
+}
+
+::-moz-selection {
+	background: var(--primary-color);
+	color: var(--white);
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+/* track */
+::-webkit-scrollbar-track {
+	background: var(--bg-lighter);
+}
+
+/* thumb */
+::-webkit-scrollbar-thumb {
+	background: var(--primary-color);
+	border-radius: 10px;
+}
+
+/* hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #0f5e42; /* slightly darker green */
+}
+
 /* ===================================
    TYPOGRAPHY
    =================================== */
@@ -583,6 +614,15 @@ nav.scrolled {
     }
 }
 
+@media (max-width:340px) {
+    .nav-surrani-text{
+        font-size: 18px;
+    }
+    .nav-foundation-text{
+        font-size: 18px;
+    }
+}
+
 @media (max-width: 768px) {
     .mobile-menu-toggle {
         display: block;
@@ -986,6 +1026,13 @@ nav.scrolled {
     .btn-secondary {
         padding: 10px 24px;
         font-size: 0.9rem;
+    }
+}
+
+
+@media (min-width:2560px) {
+    .hero{
+        min-height: 50vh;
     }
 }
 
